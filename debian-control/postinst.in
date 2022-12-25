@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set +e
+
+useradd -r scenderecurrency
+groupadd -r scenderecurrency
+
+mkdir -p /var/scenderecurrency/Scendere
+mkdir -p /var/scenderecurrency/ScendereBeta
+mkdir -p /var/scenderecurrency/ScendereTest
+chown -R scenderecurrency: /var/scenderecurrency
+
+systemctl stop ${SCENDERE_SERVICE} 2>/dev/null
+systemctl disable ${SCENDERE_SERVICE} 2>/dev/null
+cp ${CMAKE_INSTALL_PREFIX}/extras/systemd/${SCENDERE_SERVICE} /etc/systemd/system/${SCENDERE_SERVICE}
+systemctl daemon-reload
+systemctl enable ${SCENDERE_SERVICE}
+systemctl start ${SCENDERE_SERVICE}
+sleep 1
+systemctl --no-pager status ${SCENDERE_SERVICE}
+
+set -e

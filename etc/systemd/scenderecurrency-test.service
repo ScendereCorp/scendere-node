@@ -1,0 +1,13 @@
+[Unit]
+Description=Scendere Test Network Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=scenderecurrency
+WorkingDirectory=/var/scenderecurrency/ScendereTest
+ExecStart=/usr/bin/scendere_node --daemon --network=test --data_path=/var/scenderecurrency/ScendereTest
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

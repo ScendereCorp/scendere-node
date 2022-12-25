@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set +e
+
+systemctl stop ${SCENDERE_SERVICE} 2>/dev/null
+systemctl disable ${SCENDERE_SERVICE} 2>/dev/null
+rm -rf /etc/systemd/system/${SCENDERE_SERVICE}
+systemctl daemon-reload
+
+set -e

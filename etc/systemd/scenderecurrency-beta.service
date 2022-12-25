@@ -1,0 +1,13 @@
+[Unit]
+Description=Scendere Beta Network Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=scenderecurrency
+WorkingDirectory=/var/scenderecurrency/ScendereBeta
+ExecStart=/usr/bin/scendere_node --daemon --network=beta --data_path=/var/scenderecurrency/ScendereBeta
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
