@@ -1,7 +1,3 @@
-<p style="text-align:center;"><img src="/images/logo.svg" width"300px" height="auto" alt="Logo"></p>
-
-
-
 [![Live Artifacts](https://github.com/scenderecurrency/scendere-node/workflows/Live/badge.svg)](https://github.com/scenderecurrency/scendere-node/actions?query=workflow%3ALive)
 [![Beta Artifacts](https://github.com/scenderecurrency/scendere-node/workflows/Beta/badge.svg)](https://github.com/scenderecurrency/scendere-node/actions?query=workflow%3ABeta)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/scenderecurrency/scendere-node)](https://github.com/scenderecurrency/scendere-node/releases/latest)
